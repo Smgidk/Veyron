@@ -6,17 +6,18 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
     readonly main: (a: number, b: number) => number;
-    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___js_sys_ff95725ac0cc098d___Array__web_sys_fe85a13c44a4cc70___features__gen_ResizeObserver__ResizeObserver______true_: (a: number, b: number, c: any, d: any) => void;
+    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___js_sys_ff95725ac0cc098d___Array__web_sys_b9eee65a3272014b___features__gen_ResizeObserver__ResizeObserver______true_: (a: number, b: number, c: any, d: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue__core_ed718c3d60ebd546___result__Result_____wasm_bindgen_fd8ea12491956883___JsError___true_: (a: number, b: number, c: any) => [number, number];
-    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___core_ed718c3d60ebd546___option__Option_web_sys_fe85a13c44a4cc70___features__gen_Blob__Blob_______true_: (a: number, b: number, c: number) => void;
+    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___core_ed718c3d60ebd546___option__Option_web_sys_b9eee65a3272014b___features__gen_Blob__Blob_______true_: (a: number, b: number, c: number) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true_: (a: number, b: number, c: any) => void;
+    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__10: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__3: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__4: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__5: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__6: (a: number, b: number, c: any) => void;
-    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__7: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__8: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___wasm_bindgen_fd8ea12491956883___JsValue______true__9: (a: number, b: number, c: any) => void;
+    readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke___web_sys_b9eee65a3272014b___features__gen_MessageEvent__MessageEvent______true_: (a: number, b: number, c: any) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke_______true_: (a: number, b: number) => void;
     readonly wasm_bindgen_fd8ea12491956883___convert__closures_____invoke_______true__1_: (a: number, b: number) => void;
     readonly __wbindgen_malloc: (a: number, b: number) => number;
