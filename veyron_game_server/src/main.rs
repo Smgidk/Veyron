@@ -24,6 +24,15 @@ use tokio::{
 const TCP_SERVER_ADDRESS: &str = "0.0.0.0:4000";
 const DEFAULT_HTTP_PORT: u16 = 10000;
 
+#[derive(Serialize, Deserialize, Clone, Copy, Debug, Default, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+enum GameMode {
+    #[default]
+    Lobby,
+    MeetingRoom,
+    Dropper,
+}
+
 #[derive(Serialize, Deserialize, Clone, Debug)]
 enum ClientMessage {
     Join { username: String },
@@ -33,6 +42,8 @@ enum ClientMessage {
         z: f32,
         rotation_y: f32,
         grounded: bool,
+        #[serde(default)]
+        game_mode: GameMode,
     },
     Chat { message: String },
 }
@@ -54,6 +65,8 @@ struct NetPlayer {
     z: f32,
     rotation_y: f32,
     grounded: bool,
+    #[serde(default)]
+    game_mode: GameMode,
 }
 
 struct ClientState {
@@ -305,6 +318,7 @@ fn process_client_message(
                 z: 0.0,
                 rotation_y: 0.0,
                 grounded: true,
+                game_mode: GameMode::Lobby,
             };
 
             if let Ok(mut clients) = state.clients.lock() {
@@ -328,7 +342,7 @@ fn process_client_message(
             }
             broadcast_snapshot(&state.clients);
         }
-        ClientMessage::State { x, y, z, rotation_y, grounded } => {
+        ClientMessage::State { x, y, z, rotation_y, grounded, game_mode } => {
             if !*joined {
                 return;
             }
@@ -344,6 +358,7 @@ fn process_client_message(
                         0.0
                     };
                     client.player.grounded = grounded;
+                    client.player.game_mode = game_mode;
                 }
             }
             broadcast_snapshot(&state.clients);
